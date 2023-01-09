@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.11.0 on win32)" generated="20230109 17:16:43.552" rpa="false" schemaversion="3">
+<suite id="s1" name="TarefaArgumentos" source="C:\Robot\VariaveisEscoposArgumentos\TarefaArgumentos.robot">
+<test id="s1-t1" name="Imprimir e-mail customizado e aleatório" line="8">
+<kw name="Gerar e-mail customizado e aleatório">
+<var>${CRIAR_EMAIL}</var>
+<arg>${PESSOA.nome}</arg>
+<arg>${PESSOA.sobrenome}</arg>
+<kw name="Generate Random String" library="String">
+<var>${EMAIL_ALEATORIO}</var>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<msg timestamp="20230109 17:16:43.588" level="INFO">${EMAIL_ALEATORIO} = 0Tdxfr6Y</msg>
+<status status="PASS" starttime="20230109 17:16:43.587" endtime="20230109 17:16:43.588"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${EMAIL_GERADO}</var>
+<arg>${NOME}${SOBRENOME}${EMAIL_ALEATORIO}@testerobot.com</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230109 17:16:43.588" level="INFO">${EMAIL_GERADO} = MarilsaBarros0Tdxfr6Y@testerobot.com</msg>
+<status status="PASS" starttime="20230109 17:16:43.588" endtime="20230109 17:16:43.588"/>
+</kw>
+<msg timestamp="20230109 17:16:43.588" level="INFO">${CRIAR_EMAIL} = MarilsaBarros0Tdxfr6Y@testerobot.com</msg>
+<status status="PASS" starttime="20230109 17:16:43.586" endtime="20230109 17:16:43.588"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${CRIAR_EMAIL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230109 17:16:43.589" endtime="20230109 17:16:43.590"/>
+</kw>
+<status status="PASS" starttime="20230109 17:16:43.586" endtime="20230109 17:16:43.590"/>
+</test>
+<status status="PASS" starttime="20230109 17:16:43.553" endtime="20230109 17:16:43.592"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TarefaArgumentos">TarefaArgumentos</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
